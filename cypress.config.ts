@@ -11,8 +11,13 @@ export default defineConfig({
       prod:'https://coding.pasv.us/course',
       info:'Hello World!',
       base: 'https://uitestingplayground.com',
+      demoQA: 'https://demoqa.com',
       homeWork: 'https://play1.automationcamp.ir/expected_conditions.html'
     },
   },
+retries: {
+  runMode: 2,
+  openMode: 2,
+},
   defaultCommandTimeout: 16_000,
 });

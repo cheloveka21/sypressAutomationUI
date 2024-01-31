@@ -47,7 +47,7 @@ describe('VISIBLE BUTTON', () => {
         cy.visit(Cypress.env('homeWork'));
         cy.get('#enabled_target').should('be.disabled')
         .should('have.css', 'background-color', 'rgb(255, 0, 57)')
-        //.should('have.text','Disabled  Button');
+        cy.contains('#enabled_target','Disabled Button');
         cy.get('#enabled_trigger').should('be.visible').and('exist').click();
         cy.get('#enabled_target').should('be.enabled')
         .should('have.class', 'btn btn-success')
