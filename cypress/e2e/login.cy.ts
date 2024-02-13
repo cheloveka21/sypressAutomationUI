@@ -6,8 +6,8 @@ describe('Login', () => {
   });
 
   it("login", () => {
-    cy.get("#userName").type("test");
-    cy.get("#password").type("Test1234*");
+    cy.get("#userName").type(process.env.EMAIL);
+    cy.get("#password").type(process.env.PASSWORD);
     cy.get("#login").click();
     //cy.contains('button', 'Login').click()
     cy.contains("Log out");
