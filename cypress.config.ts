@@ -15,7 +15,8 @@ export default defineConfig({
       base: 'https://uitestingplayground.com',
       demoQA: 'https://demoqa.com',
       homeWork: 'https://play1.automationcamp.ir/expected_conditions.html',
-      herokuapp: 'https://the-internet.herokuapp.com'
+      herokuapp: 'https://the-internet.herokuapp.com',
+      homeWorkiframe:'https://play1.automationcamp.ir'
     },
   },
 retries: {
