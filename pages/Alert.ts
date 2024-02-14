@@ -32,7 +32,7 @@ class Alert {
      jsPrompt() {
        const text = "Hello World!";
        cy.window().then($win => {
-         cy.stub($win, "prompt").returns(text);
+         cy.stub($win, "prompt").returns(text); // i'm waiting for
          cy.contains(this.buttonSelector, this.jsPromptText).click();
        });
        cy.get(this.resultSelector).should("include.text", text);
