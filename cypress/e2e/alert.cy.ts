@@ -4,7 +4,9 @@ describe("ALERT", () => {
   beforeEach(() => {
     cy.visit(`${Cypress.env("herokuapp")}/javascript_alerts`);
   });
-
+  beforeEach(() => {
+    cy.intercept({ resourceType: /xhr|fetch/ }, { log: false });
+  });
   it("Click for JS Alert", () => {
     AlertPage.jsAlert();
   });
@@ -13,7 +15,7 @@ describe("ALERT", () => {
   });
   it("Click for JS Confirm False", () => {});
 
-  it.only("Click for JS Prompt OK/true", () => {
+  it("Click for JS Prompt OK/true", () => {
     AlertPage.jsPrompt();
   });
 
