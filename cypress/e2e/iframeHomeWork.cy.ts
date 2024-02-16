@@ -1,9 +1,10 @@
-import { IFrameHomePage } from "../../pages/IframeHomeWork"
+import { IFrameHomePage } from "../../pages/IframeHomeWork";
 
-describe('IFRAMEHOMEWORK~', () => {
-    beforeEach(() => {
-        IFrameHomePage.visit()
-       })
-    it('iframeFirst', () => {
-    }) 
-    });
+describe("IFRAMEHOMEWORK~", () => {
+  beforeEach(() => {
+    IFrameHomePage.visit();
+  });
+  it("iframeFirst", () => {
+    IFrameHomePage.getIframeHomeWork();
+  });
+});
