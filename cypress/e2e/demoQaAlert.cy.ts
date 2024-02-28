@@ -10,7 +10,13 @@ describe("DEMO ALERT", () => {
   it("Alert will appear after 5 seconds", () => {
     DemoAlertPage.timerAlertButton();
   });
-  it("Confirm box will appear", () => {
-    DemoAlertPage.confirmButton();
+  it("Confirm box will appear and OK", () => {
+    DemoAlertPage.confirmButtonOk();
+  });
+  it("Confirm box will appear and Cancel", () => {
+    DemoAlertPage.confirmButtonCancel();
+  });
+  it("Prompt box will appear and OK", () => {
+    DemoAlertPage.promptButtonOk();
   });
 });

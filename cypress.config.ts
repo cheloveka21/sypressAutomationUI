@@ -20,6 +20,8 @@ export default defineConfig({
       homeWork: "https://play1.automationcamp.ir/expected_conditions.html",
       herokuapp: "https://the-internet.herokuapp.com",
       homeWorkiframe: "https://play1.automationcamp.ir",
+      email: 'cheloveka21@gmail.com',
+      password: 'Lysenko1984',
     },
   },
 
