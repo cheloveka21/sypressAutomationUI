@@ -6,6 +6,19 @@ describe("INTERCEPT", () => {
       "https://server-stage.pasv.us/course/coursesProgress/65c294e5f81c70dfa70cb5c0",
       { fixture: "progress.json" }
     ).as("course");
+  //   cy.intercept(
+  //     {
+  //         method: 'GET',
+  //         url: 'https://server-stage.pasv.us/course/coursesProgress/5fb95c1f360c14003c7ab541',
+  //     },
+  //     (req) => {
+  //         req.continue((res) => {
+  //             if (res.statusCode === 200) {
+  //                 throw new Error('ERROR 200');
+  //             }
+  //         });
+  //     }`
+  // ).as('course');
     cy.visit(`${Cypress.env("stage")}/user/login`);
     cy.get("#normal_login_email").type(Cypress.env("email"));
     cy.get("#normal_login_password").type(Cypress.env("password"), {
@@ -14,6 +27,7 @@ describe("INTERCEPT", () => {
     cy.get('button[type="submit"]').click();
     cy.wait("@login").then((wholeResponse) => {  //pause until it is done
       console.log(wholeResponse, "res");
+      cy.log('123')
       let id = wholeResponse.response.body.payload.user._id;
       cy.location().should((loc) => {
         console.log(loc, "loc");

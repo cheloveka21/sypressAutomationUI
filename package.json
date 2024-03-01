@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "open": "cypress open --e2e --browser chrome",
-    "cypress-run": "cypress run --browser chrome --spec cypress/e2e/autoFill.cy.ts"
+    "cypress-run": "cypress run --browser chrome --spec cypress/e2e/autoFill.cy.ts`"
   },
   "author": "Anastasiia Lysenko",
   "license": "ISC",
@@ -16,6 +16,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "dotenv": "^16.4.1"
+    "dotenv": "^16.4.1",
+    "node-xlsx": "^0.23.0"
   }
 }
